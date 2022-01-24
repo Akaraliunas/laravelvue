@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[309],{309:(e,n,s)=>{s.r(n),s.d(n,{default:()=>t});const l={data:function(){return{message:"Hello World Home"}}};const t=(0,s(900).Z)(l,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("div",[e._v("\n    "+e._s(e.message)+"\n")])}),[],!1,null,null,null).exports}}]);
