@@ -43,5 +43,7 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::view('modals', 'modals')->name('modals');
     Route::view('tables', 'tables')->name('tables');
     Route::view('calendar', 'calendar')->name('calendar');
-    // Route::view('projects', 'projects')->name('projects');
+
+    Route::get('/projects', ['\App\Http\Controllers\ProjectsController', 'index'])->name('projects'); // note the name() method.
+
 });
