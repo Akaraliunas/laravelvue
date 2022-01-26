@@ -122,7 +122,7 @@ var staticRenderFns = [
       { staticClass: "p-4 mx-auto bg-white rounded-lg shadow-lg" },
       [
         _c("h1", { staticClass: "mb-4 text-2xl text-center text-gray-700" }, [
-          _vm._v("\n        Home component\n    "),
+          _vm._v("\n        About me \n    "),
         ]),
         _vm._v(" "),
         _c("p", [

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,14 @@ Route::get('/about', function () {
 //     return view('dashboard');
 // })->name('dashboard');
 
+// Route::resource('projects', ProjectsController::class);
+
+// Route::get('/projects', ['\App\Http\Controllers\ProjectsController', 'index']);
+
+Route::resource('projects', ProjectsController::class);
+// Route::post('projects/create','ProjectsController@create');
+
+
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
@@ -34,4 +43,5 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::view('modals', 'modals')->name('modals');
     Route::view('tables', 'tables')->name('tables');
     Route::view('calendar', 'calendar')->name('calendar');
+    // Route::view('projects', 'projects')->name('projects');
 });
