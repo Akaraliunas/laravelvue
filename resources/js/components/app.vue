@@ -11,6 +11,9 @@
                 </nav>
             </div>
         </div>
+
+       <div class="div">{{currentPath}}</div>
+
         <div class="container">
             <router-view v-slot="{ Component }">
                 <transition name="scale" mode="out-in">
@@ -22,7 +25,17 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        props: ['currentPath'],
+        data(){
+            return {
+               
+            }
+        },
+        mounted() {
+            console.log(this.currentPath)
+    }
+}
 </script>
 
 <style lang="scss" >

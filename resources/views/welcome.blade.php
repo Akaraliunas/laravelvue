@@ -22,7 +22,7 @@
     <body>
 
         <div id="app">
-            <app></app>
+            <app :current-path="{{ json_encode($currentPath) }}"></app>
         </div>
 
         <script src="{{ mix('js/app.js') }}"></script>

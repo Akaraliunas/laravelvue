@@ -14,24 +14,13 @@ use App\Http\Controllers\ProjectsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['\App\Http\Controllers\AppController', 'index']);
 
 Route::get('/about', function () {
     return view('welcome');
 });
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
-
-// Route::resource('projects', ProjectsController::class);
-
-// Route::get('/projects', ['\App\Http\Controllers\ProjectsController', 'index']);
 
 Route::resource('projects', ProjectsController::class);
-// Route::post('projects/create','ProjectsController@create');
-
 
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
@@ -43,7 +32,4 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::view('modals', 'modals')->name('modals');
     Route::view('tables', 'tables')->name('tables');
     Route::view('calendar', 'calendar')->name('calendar');
-
-    Route::get('/projects', ['\App\Http\Controllers\ProjectsController', 'index'])->name('projects'); // note the name() method.
-
 });
