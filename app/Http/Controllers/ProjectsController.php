@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Projects;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
@@ -14,7 +14,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $projects = Projects::latest()->paginate(5);
+        $projects = Project::latest()->paginate(5);
 
         return view('projects.index', compact('projects'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
@@ -43,7 +43,7 @@ class ProjectsController extends Controller
             'description' => 'required'
         ]);
 
-        Projects::create($request->all());
+        Project::create($request->all());
 
         return redirect()->route('projects.index')
             ->with('success', 'Project created successfully.');
@@ -52,40 +52,40 @@ class ProjectsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Projects  $projects
+     * @param  \App\Models\Project  $projects
      * @return \Illuminate\Http\Response
      */
-    public function show(Projects $projects)
+    public function show(Project $project)
     {
-        return view('projects.show', compact('projects'));
+        return view('projects.show', compact('project'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Projects  $projects
+     * @param  \App\Models\Project  $projects
      * @return \Illuminate\Http\Response
      */
-    public function edit(Projects $projects)
+    public function edit(Project $project)
     {
-        return view('projects.edit', compact('projects'));
+        return view('projects.edit', compact('project'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Projects  $projects
+     * @param  \App\Models\Project  $projects
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Projects $projects)
+    public function update(Request $request, Project $project)
     {
         $request->validate([
             'name' => 'required',
             'description' => 'required'
         ]);
 
-        $projects->update($request->all());
+        $project->update($request->all());
 
         return redirect()->route('projects.index')
             ->with('success', 'Project updated successfully');
@@ -94,12 +94,12 @@ class ProjectsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Projects  $projects
+     * @param  \App\Models\Project  $projects
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Projects $projects)
+    public function destroy(Project $project)
     {
-        $projects->delete();
+        $project->delete();
 
         return redirect()->route('projects.index')
             ->with('success', 'Project deleted successfully');

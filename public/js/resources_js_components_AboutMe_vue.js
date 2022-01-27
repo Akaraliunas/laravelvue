@@ -22,7 +22,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['componentData']
+});
 
 /***/ }),
 
@@ -110,30 +120,36 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "p-4 mx-auto bg-white rounded-lg shadow-lg" },
+    [
+      _c("h1", { staticClass: "mb-4 text-2xl text-center text-gray-700" }, [
+        _vm._v("\n        About me \n    "),
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "\n        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, expedita? Officiis autem, omnis hic similique facere tempora culpa animi quisquam commodi illum sapiente error fugiat? Nobis, architecto? Sapiente, laborum sint!\n    "
+        ),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "asd" }, [_vm._v(_vm._s(_vm.componentData))]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { attrs: { id: "list" } },
+        _vm._l(_vm.componentData.data, function (item, id) {
+          return _c("li", { key: id }, [
+            _vm._v("\n            " + _vm._s(item) + "\n        "),
+          ])
+        }),
+        0
+      ),
+    ]
+  )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "p-4 mx-auto bg-white rounded-lg shadow-lg" },
-      [
-        _c("h1", { staticClass: "mb-4 text-2xl text-center text-gray-700" }, [
-          _vm._v("\n        About me \n    "),
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, expedita? Officiis autem, omnis hic similique facere tempora culpa animi quisquam commodi illum sapiente error fugiat? Nobis, architecto? Sapiente, laborum sint!\n    "
-          ),
-        ]),
-      ]
-    )
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

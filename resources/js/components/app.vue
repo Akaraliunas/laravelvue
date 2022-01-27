@@ -12,12 +12,10 @@
             </div>
         </div>
 
-       <div class="div">{{currentPath}}</div>
-
         <div class="container">
-            <router-view v-slot="{ Component }">
+            <router-view v-slot="{ Component }" :componentData='componentInfo'>
                 <transition name="scale" mode="out-in">
-                   <component :is="Component" />
+                   <component :is="Component"/>
                  </transition> 
             </router-view>
         </div>
@@ -25,16 +23,16 @@
 </template>
 
 <script>
-    export default {
-        props: ['currentPath'],
-        data(){
-            return {
-               
-            }
-        },
-        mounted() {
-            console.log(this.currentPath)
-    }
+export default {
+    props: ['controllerInfo'],
+    data(){
+        return {
+            'componentInfo': this.controllerInfo
+        }
+    },
+    mounted() {
+        
+}
 }
 </script>
 

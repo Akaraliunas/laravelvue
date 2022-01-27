@@ -15,13 +15,9 @@ use App\Http\Controllers\ProjectsController;
 */
 
 Route::get('/', ['\App\Http\Controllers\AppController', 'index']);
-
-Route::get('/about', function () {
-    return view('welcome');
-});
+Route::get('/about', ['\App\Http\Controllers\AppController', 'index']);
 
 Route::resource('projects', ProjectsController::class);
-
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
