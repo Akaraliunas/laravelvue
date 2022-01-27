@@ -3,11 +3,12 @@
         <div class="container">
             <div class="flex justify-between my-3">
                 <div class="logo">
-                    Aivaras karaliūnas
+                    Aivaras Karaliūnas
                 </div>
                 <nav class="">
                     <router-link :to="{ name: 'Home' }">Home</router-link> |
-                    <router-link :to="{ name: 'About' }">About me</router-link>
+                    <router-link :to="{ name: 'About' }">About me</router-link> |
+                    <router-link :to="{ name: 'Projects' }">My Projects</router-link>
                 </nav>
             </div>
         </div>

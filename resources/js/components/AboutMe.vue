@@ -6,14 +6,6 @@
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, expedita? Officiis autem, omnis hic similique facere tempora culpa animi quisquam commodi illum sapiente error fugiat? Nobis, architecto? Sapiente, laborum sint!
         </p>
-
-        <div class="asd">{{ componentData }}</div>
-
-        <ul id="list">
-            <li v-for="(item,id) in componentData.data" :key="id">
-                {{ item }}
-            </li>
-        </ul>
     </div>
 </template>
 

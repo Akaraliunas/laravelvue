@@ -16,6 +16,7 @@ use App\Http\Controllers\ProjectsController;
 
 Route::get('/', ['\App\Http\Controllers\AppController', 'index']);
 Route::get('/about', ['\App\Http\Controllers\AppController', 'index']);
+Route::get('/my-projects', ['\App\Http\Controllers\AppController', 'index']);
 
 Route::resource('projects', ProjectsController::class);
 

@@ -60,7 +60,7 @@
                                     
                                 </td>
                                 <td class="px-4 py-3 text-xs">
-                                    {{ $project->description }}
+                                    {{ substr( $project->description, 0, 100 ) }}
                                 </td>
                                 <td class="px-4 py-3 text-sm">
                                     {{ date_format($project->created_at, 'Y m d -  h:m:s') }}

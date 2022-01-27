@@ -11,7 +11,9 @@ class AppController extends Controller
 {
     public function index() {
 
-        $infoFromController = Project::latest()->paginate(5);
+        $infoFromController = [
+            'projects' => Project::latest()->paginate(5),
+        ];
 
         return view('welcome', compact('infoFromController'));
     }

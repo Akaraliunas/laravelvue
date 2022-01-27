@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import home from './routes/home';
 import aboutMe from './routes/aboutme';
+import projects from './routes/projects';
 
 Vue.use(VueRouter);
 
@@ -12,5 +13,6 @@ export default new VueRouter({
     routes: [
         ...home,
         ...aboutMe,
+        ...projects,
     ],
 });
