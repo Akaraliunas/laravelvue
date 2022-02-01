@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
-class ProjectsController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -103,5 +103,11 @@ class ProjectsController extends Controller
 
         return redirect()->route('projects.index')
             ->with('success', 'Project deleted successfully');
+    }
+
+    public function getProjects( )
+    {
+        $projects = Project::all();
+        return $projects;
     }
 }

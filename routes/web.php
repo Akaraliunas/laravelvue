@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,17 +16,24 @@ use App\Http\Controllers\ProjectsController;
 
 Route::get('/', ['\App\Http\Controllers\AppController', 'index']);
 Route::get('/about', ['\App\Http\Controllers\AppController', 'index']);
-Route::get('/my-projects', ['\App\Http\Controllers\AppController', 'index']);
+Route::get('/projects', ['\App\Http\Controllers\AppController', 'index']);
+Route::get('/contacts', ['\App\Http\Controllers\AppController', 'index']);
 
-Route::resource('projects', ProjectsController::class);
+Route::resource('admin/projects', ProjectController::class);
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
-    Route::view('dashboard', 'dashboard')->name('dashboard');
-    Route::view('forms', 'forms')->name('forms');
-    Route::view('cards', 'cards')->name('cards');
-    Route::view('charts', 'charts')->name('charts');
-    Route::view('buttons', 'buttons')->name('buttons');
-    Route::view('modals', 'modals')->name('modals');
-    Route::view('tables', 'tables')->name('tables');
-    Route::view('calendar', 'calendar')->name('calendar');
+    Route::view('admin/dashboard', 'dashboard')->name('dashboard');
+    Route::view('admin/forms', 'forms')->name('forms');
+    Route::view('admin/cards', 'cards')->name('cards');
+    Route::view('admin/charts', 'charts')->name('charts');
+    Route::view('admin/buttons', 'buttons')->name('buttons');
+    Route::view('admin/modals', 'modals')->name('modals');
+    Route::view('admin/tables', 'tables')->name('tables');
+    Route::view('admin/calendar', 'calendar')->name('calendar');
 });
+
+
+Route::prefix('api')->group( function() {
+    Route::get('getProjects', ['\App\Http\Controllers\ProjectController', 'getProjects']);
+});
+

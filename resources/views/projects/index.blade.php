@@ -4,19 +4,19 @@
 
     <div class="container grid px-6 mx-auto mt-5">
 
-        @if ($message = Session::get('success'))
+        {{-- @if ($message = Session::get('success'))
             <div class="alert alert-success">
                 <p></p>
             </div>
-        @endif
+        @endif --}}
         
         <!-- With actions -->
         <div class="flex justify-between">
-            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
+            <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300 leading-[46px]">
                 Table with actions
             </h4>
             <div class="js-create ">
-                 <a class="flex items-center mb-4 text-lg font-semibold text-gray-600 btn btn-success dark:text-gray-300" href="{{ route('projects.create') }}" title="Create a product"> 
+                 <a class="flex items-center px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" href="{{ route('projects.create') }}" title="Create a product"> 
                     Create a project
                 </a>
             </div>
@@ -104,7 +104,7 @@
                 </table>
 
             </div>
-            <div
+            {{-- <div
                 class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
                 <span class="flex items-center col-span-3">
                     Showing 21-30 of 100
@@ -180,10 +180,13 @@
                         </ul>
                     </nav>
                 </span>
-            </div>
+            </div> --}}
         </div>
+
+        <div class="block mt-6"></div>
+
+        {!! $projects->links() !!}
     </div>
 
-    {!! $projects->links() !!}
 
 @endsection

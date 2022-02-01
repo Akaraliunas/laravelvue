@@ -174,7 +174,9 @@ module.exports = {
                 xl: '36rem',
             },
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                'base': ['"Open Sans", sans-serif'],
+                'heading': ['"Ubuntu", sans-serif'],
+                'primary': ['"Cutive Mono", monospace'],
             },
         },
         screens: {

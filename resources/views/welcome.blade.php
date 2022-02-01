@@ -6,7 +6,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel Vue</title>
+        <title>Aivaras Karaliūnas</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,7 +22,7 @@
     <body>
 
         <div id="app">
-            <app :controller-info="{{ json_encode($infoFromController) }}"></app>
+            <App></App>
         </div>
 
         <script src="{{ mix('js/app.js') }}"></script>
