@@ -4,7 +4,7 @@
             About me
         </h1>
         <div class="grid grid-cols-12 gap-4 ">
-            <div class="col-span-8">
+            <div class="col-span-8 md:order-2 md:col-span-12">
                 <p>At the moment I'm working from home.</p>
                 <br>
 
@@ -30,8 +30,13 @@
                         </svg>
                     </a>
                 </div>
+
+                <div class="mt-6 referal">
+                    <p class="mb-2 font-semibold">Get $200 in credit over 60 days for your website:</p>
+                    <a href="https://www.digitalocean.com/?refcode=f4bbf68abec4&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img width="150" src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
+                </div>
             </div>
-            <div class="relative col-span-4">
+            <div class="relative col-span-4 md:order-1 md:col-span-12">
                 <div class="overlay bg-dark-1 opacity-20 z-[15] fixed top-0 left-0 w-full h-full pointer-events-none"></div>
                 <img src="/images/Aivaras.png" alt="Aivaras Karaliūnas">
             </div>

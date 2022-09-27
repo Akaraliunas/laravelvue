@@ -230,7 +230,8 @@ module.exports = {
         // require('@tailwindcss/custom-forms'),
         // require('@tailwindcss/ui'),
         require('@tailwindcss/forms'),
-        require('@tailwindcss/typography')
+        require('@tailwindcss/typography'),
+        require('tailwind-hamburgers')
     ],
     corePlugins: {
         // ...
