@@ -19,9 +19,9 @@ Route::get('/about', ['\App\Http\Controllers\AppController', 'index']);
 Route::get('/projects', ['\App\Http\Controllers\AppController', 'index']);
 Route::get('/contacts', ['\App\Http\Controllers\AppController', 'index']);
 
-Route::resource('admin/projects', ProjectController::class);
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
+    Route::resource('admin/projects', ProjectController::class);
     Route::view('admin/dashboard', 'dashboard')->name('dashboard');
     Route::view('admin/forms', 'forms')->name('forms');
     Route::view('admin/cards', 'cards')->name('cards');

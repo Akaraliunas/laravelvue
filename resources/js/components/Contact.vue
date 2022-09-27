@@ -1,16 +1,23 @@
 <template>
-    <div class="p-4 mx-auto bg-[#112240] shadow-lg">
-        <h1 class="mb-8 text-3xl font-normal text-center font-heading">
-            Contacts 
+    <div class="mx-auto">
+        <h1 class="mb-8 text-3xl font-normal text-left font-heading">
+            Contacts
         </h1>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, expedita? Officiis autem, omnis hic similique facere tempora culpa animi quisquam commodi illum sapiente error fugiat? Nobis, architecto? Sapiente, laborum sint!
-        </p>
+        <div class="grid grid-cols-12">
+            <div class="col-span-12">
+                <a class='js-email' href='javascript:void(0)' v-on:click="email('aivaras', 'karaliunas.dev')">Write me an email</a>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['componentData']
+    props: ['componentData'],
+    methods: {
+        email: function (name, domain) {
+             window.location.href = 'mailto:' + name + '@' + domain;
+        }
+    }
 }
 </script>

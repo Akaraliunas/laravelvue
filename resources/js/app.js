@@ -17,13 +17,3 @@ const app = createApp(App)
 app.config.globalProperties.$axios = axios;
 app.use(router)
 app.mount('#app')
-
-// import SPA from './components/app.vue';
-
-// const app = createApp({});
-// app.component('app', SPA);
-
-// app.use(VueAxios, axios);
-// app.use(router);
-
-// app.mount('#app');

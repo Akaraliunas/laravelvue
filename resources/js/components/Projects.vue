@@ -1,7 +1,7 @@
 <template>
-    <div class="p-4 mx-auto shadow-lg bg-[#112240]">
-        <h1 class="mb-8 text-3xl font-normal text-center font-heading">
-            Projects 
+    <div class="mx-auto">
+        <h1 class="mb-8 text-3xl font-normal text-left font-heading">
+            Projects
         </h1>
         <div class="grid grid-cols-4 gap-6">
             <div class="flex flex-col" v-for="project in projects" :key="project.id">
@@ -10,7 +10,6 @@
             </div>
         </div>
 
-                
     </div>
 </template>
 

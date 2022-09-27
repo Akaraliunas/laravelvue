@@ -8,6 +8,8 @@
 
         <title>Aivaras Karaliūnas</title>
 
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
 

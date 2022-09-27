@@ -26,6 +26,13 @@ module.exports = {
         colors: {
             transparent: 'transparent',
             white: '#ffffff',
+            dark: {
+                1: '#272B31', // gunmetal
+            },
+            'accent': {
+                1: '#3096CD',
+                2: '#887068',
+            },
             black: '#000000',
             gray: {
                 '50': '#f9fafb',
@@ -176,7 +183,7 @@ module.exports = {
             fontFamily: {
                 'base': ['"Open Sans", sans-serif'],
                 'heading': ['"Ubuntu", sans-serif'],
-                'primary': ['"Cutive Mono", monospace'],
+                'primary': ['"Ubuntu", sans-serif'],
             },
         },
         screens: {
@@ -222,7 +229,7 @@ module.exports = {
         // require('tailwindcss-multi-theme'),
         // require('@tailwindcss/custom-forms'),
         // require('@tailwindcss/ui'),
-        require('@tailwindcss/forms'), 
+        require('@tailwindcss/forms'),
         require('@tailwindcss/typography')
     ],
     corePlugins: {

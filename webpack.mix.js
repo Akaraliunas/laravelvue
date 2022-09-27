@@ -1,5 +1,7 @@
 const mix = require('laravel-mix');
 
+require('laravel-mix-tailwind');
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -18,12 +20,30 @@ mix.browserSync({
 
 mix.js('resources/js/app.js', 'public/js').vue();
 
-mix.postCss('resources/css/app.css', 'public/css', [
+mix.postCss('resources/styles/app.pcss', 'public/css', [
     require("tailwindcss"),
-]);
+])
+.webpackConfig({
+    // stats: {
+    //     children: true,
+    // },
+    module: {
+        rules: [
+        {
+            test: /\.(postcss)$/,
+            use: [
+            'vue-style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
+            ]
+        }
+        ],
+    },
+});
 
 
 mix.copyDirectory('resources/images', 'public/images')
+mix.copyDirectory('resources/videos', 'public/videos')
 
 if (mix.inProduction()) {
     mix.version();
