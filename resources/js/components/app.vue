@@ -5,14 +5,14 @@
                 <div class="logo">
                     <router-link :to="{ name: 'home' }">Karaliunas.dev</router-link>
                 </div>
-                <nav class="flex gap-6 menu js-mobile-menu">
-                    <router-link :to="{ name: 'home' }" v-on:click="toggleBurger($event)"><span>01.</span>Home</router-link>
-                    <router-link :to="{ name: 'about' }" v-on:click="toggleBurger($event)"><span>02.</span>About me</router-link>
+                <nav class="flex gap-6 menu js-menu">
+                    <router-link :to="{ name: 'home' }" v-on:click="toggleBurger()"><span>01.</span>Home</router-link>
+                    <router-link :to="{ name: 'about' }" v-on:click="toggleBurger()"><span>02.</span>About me</router-link>
                     <!-- <router-link :to="{ name: 'projects' }"><span>03.</span>My Projects</router-link> -->
-                    <router-link :to="{ name: 'contacts' }" v-on:click="toggleBurger($event)"><span>03.</span>Contacts</router-link>
+                    <router-link :to="{ name: 'contacts' }" v-on:click="toggleBurger()"><span>03.</span>Contacts</router-link>
                 </nav>
 
-                <div class="tham tham-e-squeeze tham-w-8" v-on:click="toggleBurger($event)">
+                <div class="hidden tham tham-e-squeeze tham-w-8 md:flex" v-on:click="toggleBurger()">
                     <div class="tham-box">
                         <div class="tham-inner bg-accent-2" />
                     </div>
@@ -47,10 +47,11 @@ export default {
     },
     methods: {
         toggleBurger: function (event) {
-            event.currentTarget.classList.toggle('tham-active');
-
-            if (document.querySelectorAll('.js-mobile-menu').length > 0) {
-                document.querySelector('.js-mobile-menu').classList.toggle('active');
+            if (document.querySelectorAll('.tham.tham-e-squeeze').length > 0) {
+                document.querySelector('.tham.tham-e-squeeze').classList.toggle('tham-active');
+            }
+            if (document.querySelectorAll('.js-menu').length > 0) {
+                document.querySelector('.js-menu').classList.toggle('active');
             }
         }
     }
@@ -79,8 +80,8 @@ export default {
     }
 }
 
-.js-mobile-menu {
-    @apply opacity-0 pointer-events-none;
+.js-menu {
+    @apply md:opacity-0 md:pointer-events-none;
     @apply md:fixed md:left-0 md:top-0 md:w-full md:h-full md:bg-dark-1 md:flex md:flex-col md:pt-28 md:z-30;
 
     &.active {
