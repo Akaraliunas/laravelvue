@@ -19,6 +19,13 @@ Route::get('/about', ['\App\Http\Controllers\AppController', 'index']);
 Route::get('/projects', ['\App\Http\Controllers\AppController', 'index']);
 Route::get('/contacts', ['\App\Http\Controllers\AppController', 'index']);
 
+// Route::any('/register', ['\App\Http\Controllers\AppController', 'index']);
+
+if (!env('ALLOW_REGISTRATION', false)) {
+    Route::any('/register', function() {
+        abort(403);
+    });
+}
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::resource('admin/projects', ProjectController::class);
