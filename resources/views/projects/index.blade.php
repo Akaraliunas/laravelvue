@@ -9,14 +9,14 @@
                 <p></p>
             </div>
         @endif --}}
-        
+
         <!-- With actions -->
         <div class="flex justify-between">
             <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300 leading-[46px]">
                 Table with actions
             </h4>
             <div class="js-create ">
-                 <a class="flex items-center px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" href="{{ route('projects.create') }}" title="Create a product"> 
+                 <a class="flex items-center px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple" href="{{ route('projects.create') }}" title="Create a product">
                     Create a project
                 </a>
             </div>
@@ -28,6 +28,7 @@
                         <tr
                             class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
                             <th class="px-4 py-3">No</th>
+                            <th class="px-4 py-3">Image</th>
                             <th class="px-4 py-3">Name</th>
                             <th class="px-4 py-3">Description</th>
                             <th class="px-4 py-3">Date Created</th>
@@ -40,16 +41,19 @@
                                 <td class="px-4 py-3">
                                     {{ $project->id }}
                                 </td>
+                                <td>
+                                    <img src="/image/{{ $project->image }}" width="100px">
+                                </td>
                                 <td class="px-4 py-3 text-sm">
                                     <div class="flex items-center text-sm">
                                         <!-- Avatar with inset shadow -->
-                                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                                        {{-- <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
                                             <img class="object-cover w-full h-full rounded-full"
                                                 src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
                                                 alt="" loading="lazy" />
                                             <div class="absolute inset-0 rounded-full shadow-inner"
                                                 aria-hidden="true"></div>
-                                        </div>
+                                        </div> --}}
                                         <div>
                                             <p class="font-semibold">{{ $project->name }}</p>
                                             <p class="text-xs text-gray-600 dark:text-gray-400">
@@ -57,7 +61,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    
+
                                 </td>
                                 <td class="px-4 py-3 text-xs">
                                     {{ substr( $project->description, 0, 100 ) }}
@@ -82,7 +86,7 @@
                                                 </path>
                                             </svg>
                                         </a>
-                                        
+
                                         @csrf
                                         @method('DELETE')
 

@@ -40,10 +40,21 @@ class ProjectController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'nullable',
+            'link' => 'nullable',
+            'image' => 'file|mimes:jpg,jpeg,png,gif|max:1024'
         ]);
 
-        Project::create($request->all());
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+
+        Project::create($input);
 
         return redirect()->route('projects.index')
             ->with('success', 'Project created successfully.');
@@ -82,10 +93,22 @@ class ProjectController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'nullable',
+            'link' => 'nullable',
         ]);
 
-        $project->update($request->all());
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }else{
+            unset($input['image']);
+        }
+
+        $project->update($input);
 
         return redirect()->route('projects.index')
             ->with('success', 'Project updated successfully');

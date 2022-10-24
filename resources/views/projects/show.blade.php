@@ -26,9 +26,24 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="px-4 py-3 form-group">
+                    <strong class="font-semibold text-gray-600 dark:text-gray-300">Image:</strong>
+                    <img src="/image/{{ $project->image }}" width="500px">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="px-4 py-3 form-group">
                     <strong class="font-semibold text-gray-600 dark:text-gray-300">Description:</strong>
                     <div class="block w-full mt-1 text-sm font-semibold text-gray-600 form-control dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input">
                         {{ $project->description }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="px-4 py-3 form-group">
+                    <strong class="font-semibold text-gray-600 dark:text-gray-300">Link:</strong>
+                    <div class="block w-full mt-1 text-sm font-semibold text-gray-600 form-control dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input">
+                        {{ $project->link }}
                     </div>
                 </div>
             </div>

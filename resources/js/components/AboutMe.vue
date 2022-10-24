@@ -31,6 +31,10 @@
                     </a>
                 </div>
 
+                <br>
+                <p class="mb-2 font-semibold">Contact me:</p>
+                <a class='cursor-pointer js-email hover:text-accent-1' href='javascript:void(0)' v-on:click="email('aivaras', 'karaliunas.dev')">Write me an email</a>
+
                 <div class="mt-6 referal">
                     <p class="mb-2 font-semibold">Get $200 in credit over 60 days for your website:</p>
                     <a href="https://www.digitalocean.com/?refcode=f4bbf68abec4&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img width="150" src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
@@ -46,7 +50,12 @@
 
 <script>
 export default {
-    props: ['componentData']
+    props: ['componentData'],
+    methods: {
+        email: function (name, domain) {
+             window.location.href = 'mailto:' + name + '@' + domain;
+        }
+    }
 }
 </script>
 

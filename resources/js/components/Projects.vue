@@ -5,8 +5,11 @@
         </h1>
         <div class="grid grid-cols-4 gap-6">
             <div class="flex flex-col" v-for="project in projects" :key="project.id">
-                <div class="mb-4 font-bold text-md">{{ project.name }}</div>
-                <div class="text-sm">{{ project.description }}</div>
+                <a :href="project.link" target="_blank">
+                    <div class="mb-4 font-bold text-md">{{ project.name }}</div>
+                    <img :src="'/image/'+project.image" alt="">
+                    <div class="text-sm">{{ project.description }}</div>
+                </a>
             </div>
         </div>
 
@@ -31,7 +34,8 @@ export default {
         }
     },
     created() {
-        this.getProjects()
+        this.getProjects();
+        console.log(this.projects);
     }
 
 }

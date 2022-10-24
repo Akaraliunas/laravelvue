@@ -28,8 +28,8 @@
 
     @livewireStyles
     <script>
-        import Turbolinks from 'turbolinks';
-        Turbolinks.start()
+        // import Turbolinks from 'turbolinks';
+        // Turbolinks.start()
     </script>
 
     <!-- Scripts -->
