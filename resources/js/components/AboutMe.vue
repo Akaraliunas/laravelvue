@@ -10,7 +10,7 @@
 
                 <p class="font-semibold">Technologies and tools I work with:</p>
                 <p>PHP, Javascript, HTML5, CSS3.</p>
-                <p>Wordpress, woocommerce</p>
+                <p>Wordpress, Woocommerce, Prestashop</p>
 
                 <br>
                 <p class="font-semibold">Currently learning new technologies:</p>
