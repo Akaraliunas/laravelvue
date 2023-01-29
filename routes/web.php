@@ -37,6 +37,8 @@ Route::prefix('api')->group( function() {
 });
 
 
-Route::any('/register', function() {
-    abort(403);
-});
+if (env('ALLOW_REGISTRATION') !== true) {
+    Route::any('/register', function() {
+        abort(403);
+    });
+}
