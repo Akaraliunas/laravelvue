@@ -5,15 +5,12 @@
         </h1>
         <div class="grid grid-cols-12 gap-4 ">
             <div class="col-span-8 md:order-2 md:col-span-12">
-                <p>At the moment I'm working from home.</p>
-                <br>
-
-                <p class="font-semibold">Technologies and tools I work with:</p>
+                <p class="font-semibold text-accent-2">Technologies and tools I work with:</p>
                 <p>PHP, Javascript, HTML5, CSS3.</p>
-                <p>Wordpress, Woocommerce, Prestashop</p>
+                <p>Magento 1/2, Prestashop, Wordpress, Woocommerce.</p>
 
                 <br>
-                <p class="font-semibold">Currently learning new technologies:</p>
+                <p class="font-semibold text-accent-2">Currently learning new technologies:</p>
                 <p>Laravel + vuejs</p>
 
                 <br>
@@ -32,8 +29,10 @@
                 </div>
 
                 <br>
-                <p class="mb-2 font-semibold">Contact me:</p>
-                <a class='cursor-pointer js-email hover:text-accent-1' href='javascript:void(0)' v-on:click="email('aivaras', 'karaliunas.dev')">Write me an email</a>
+                <div class="flex">
+                    <p class="mr-2 font-semibold text-accent-2">Contact me:</p>
+                    <a class='cursor-pointer js-email hover:text-accent-1' href='javascript:void(0)' v-on:click="email('aivaras', 'karaliunas.dev')">Write me an email</a>
+                </div>
 
                 <div class="mt-6 referal">
                     <p class="mb-2 font-semibold">Get $200 in credit over 60 days for your website:</p>

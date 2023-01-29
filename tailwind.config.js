@@ -31,7 +31,7 @@ module.exports = {
             },
             'accent': {
                 1: '#3096CD',
-                2: '#887068',
+                2: '#CEA192',
             },
             black: '#000000',
             gray: {
