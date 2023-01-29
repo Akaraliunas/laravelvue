@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProjectController;
 
 /*
@@ -35,10 +36,3 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 Route::prefix('api')->group( function() {
     Route::get('getProjects', ['\App\Http\Controllers\ProjectController', 'getProjects']);
 });
-
-
-if (env('ALLOW_REGISTRATION') !== true) {
-    Route::any('/register', function() {
-        abort(403);
-    });
-}
