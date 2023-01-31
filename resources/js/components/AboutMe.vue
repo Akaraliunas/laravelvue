@@ -1,10 +1,20 @@
 <template>
-    <div class="mx-auto">
+    <div class="mx-auto overflow-visible md:overflow-hidden">
         <h1 class="mb-8 text-3xl font-normal text-left font-heading">
             About me
         </h1>
-        <div class="grid grid-cols-12 gap-4 ">
-            <div class="col-span-8 md:order-2 md:col-span-12">
+        <div class="grid grid-cols-12 gap-8 ">
+            <div class="relative col-span-4 md:order-1 sm:col-span-12 md:col-span-6">
+                <div class="w-full pl-5 scale-100 md:pl-0 md:scale-[0.80] c-perspective xxs:w-10/12">
+                    <div class="block c-image-wrapper">
+                        <div class="overlay bg-dark-1 opacity-20 z-[15] fixed top-0 left-0 w-full h-full pointer-events-none"></div>
+                        <img class="block object-cover w-full h-full overflow-hidden" src="/images/Aivaras.png" alt="Aivaras Karaliūnas">
+                        <div class="frame frame-1"></div>
+                        <div class="frame frame-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-8 md:order-2 md:col-span-6 sm:col-span-12">
                 <p class="font-semibold text-accent-2">Technologies and tools I work with:</p>
                 <p>PHP, Javascript, HTML5, CSS3.</p>
                 <p>Magento 1/2, Prestashop, Wordpress, Woocommerce.</p>
@@ -39,10 +49,6 @@
                     <a href="https://www.digitalocean.com/?refcode=f4bbf68abec4&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img width="150" src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a>
                 </div>
             </div>
-            <div class="relative col-span-4 md:order-1 md:col-span-12">
-                <div class="overlay bg-dark-1 opacity-20 z-[15] fixed top-0 left-0 w-full h-full pointer-events-none"></div>
-                <img src="/images/Aivaras.png" alt="Aivaras Karaliūnas">
-            </div>
         </div>
     </div>
 </template>
@@ -66,4 +72,40 @@ export default {
             }
         }
     }
+
+    .c-perspective {
+        -webkit-perspective: 38rem;
+        perspective: 38rem;
+    }
+
+    .c-image-wrapper {
+        transform: translate(0%, 0px) rotateY(7deg) scale(1.00001, 1);
+    }
+
+    .frame.frame-1 {
+        opacity: .25;
+        -webkit-transform: translate(-0.75rem,0.75rem);
+        -ms-transform: translate(-0.75rem,0.75rem);
+        transform: translate(-0.75rem,0.75rem);
+    }
+
+    .frame.frame-2 {
+        opacity: .1;
+        -webkit-transform: translate(-1.5rem,1.5rem);
+        -ms-transform: translate(-1.5rem,1.5rem);
+        transform: translate(-1.5rem,1.5rem);
+    }
+
+
+    .frame {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        @apply  border border-accent-2;
+    }
+
+
 </style>
