@@ -174,6 +174,10 @@ module.exports = {
                 '800': '#99154b',
                 '900': '#751a3d',
             },
+            grayish: {
+                '1': '#d6d6d6',
+                '2': '#d2d2d2',
+            }
         },
         extend: {
             maxHeight: {

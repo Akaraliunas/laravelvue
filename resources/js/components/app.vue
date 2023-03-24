@@ -8,7 +8,7 @@
                 <nav class="flex gap-6 menu js-menu">
                     <router-link :to="{ name: 'home' }" v-on:click="toggleBurger()"><span>01.</span>Home</router-link>
                     <router-link :to="{ name: 'about' }" v-on:click="toggleBurger()"><span>02.</span>About me</router-link>
-                    <router-link :to="{ name: 'projects' }" v-on:click="toggleBurger()"><span>03.</span>My Projects</router-link>
+                    <!-- <router-link :to="{ name: 'projects' }" v-on:click="toggleBurger()"><span>03.</span>My Projects</router-link> -->
                     <!-- <router-link :to="{ name: 'contacts' }" v-on:click="toggleBurger()"><span>03.</span>Contacts</router-link> -->
                 </nav>
 
