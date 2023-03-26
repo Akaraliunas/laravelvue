@@ -23,35 +23,31 @@
               src="/images/Aivaras.png"
               alt="Aivaras Karaliūnas"
             />
-            <div class="transition-all duration-500 ease-in-out frame frame-1 group-hover:scale-105"></div>
-            <div class="transition-all duration-500 ease-in-out frame frame-2 group-hover:scale-105"></div>
+            <div
+              class="transition-all duration-500 ease-in-out frame frame-1 group-hover:scale-105"
+            ></div>
+            <div
+              class="transition-all duration-500 ease-in-out frame frame-2 group-hover:scale-105"
+            ></div>
           </div>
         </div>
       </div>
-      <div class="col-span-6 md:order-2 md:col-span-6 sm:col-span-12">
+      <div class="flex items-center col-span-6 md:order-2 md:col-span-6 sm:col-span-12">
         <div class="content text-white-1">
           <p>
             Hello! My name is Aivaras Karaliūnas and with 3-4 years of
             experience in website and e-shop creation, I have developed a
             passion for creating exceptional digital experiences that drive
             results. I am highly motivated and driven by the end result, always
-            striving to exceed expectations.
-          </p>
-
-          <p>
-            My ability to prioritize my time and tasks has allowed me to deliver
-            quality work within tight deadlines. I am constantly seeking to
+            striving to exceed expectations. Also I am constantly seeking to
             expand my knowledge and stay up-to-date with the latest trends in
             the field of IT.
           </p>
-
           <p>
             As someone who values flexibility, I am interested in remote or
             partially remote work arrangements, preferably a 3+2 schedule.
-            However, I am willing to come to work to the office in Vilnius or
-            another city for 1-2 days per week.
           </p>
-          <p></p>
+
           <div class="font-semibold text-accent-2">
             Technologies and tools I work with:
           </div>
@@ -72,242 +68,55 @@
       <div class="col-span-8 col-start-3 md:col-start-1 md:col-span-12">
         <h3 class="col-span-10 col-start-2 mb-8">My experience:</h3>
         <div class="flex flex-col">
-          <div class="border-l-2 border-accent-1">
-            <div class="md:flex flex-start">
-              <div
-                class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  class="w-3 h-3 text-white"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="block p-6 mb-10 ml-6 rounded-lg shadow-lg bg-grayish-2"
-              >
-                <div class="flex justify-between mb-4 md:flex-col">
-                  <div
-                    class="flex gap-1 font-bold text-accent-2 md:flex-col md:gap-0"
-                  >
-                    Fullstack developer
-                    <div class="flex gap-1">
-                      <div>@</div>
-                      <div class="text-accent-1">
-                        <a href="https://www.creation.lt/">Creation</a>
+
+            <div class="flex flex-col" v-for="experience in experiences" :key="experience.id">
+                <div class="border-l-2 border-accent-1">
+                  <div class="md:flex flex-start">
+                    <div
+                      class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        class="w-3 h-3 text-white"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="block px-6 mb-10 ml-6 rounded-lg">
+                      <div class="flex justify-between mb-4 md:flex-col">
+                        <div
+                          class="flex gap-1 font-bold text-accent-2 md:flex-col md:gap-0"
+                        >
+                            {{ experience.position }}
+                          <div class="flex gap-1">
+                            <div>@</div>
+                            <div class="text-accent-1">
+                              <a href="{{ experience.company_url }}">{{ experience.company }}</a>
+                            </div>
+                          </div>
+                        </div>
+                        <a
+                          href="#!"
+                          class="text-sm font-medium transition duration-300 ease-in-out text-accent-1 hover:text-accent-1"
+                          >{{ experience.dates }}</a
+                        >
                       </div>
+                      <p class="mb-6 text-white">
+                        {{ experience.description }}
+                      </p>
                     </div>
                   </div>
-                  <a
-                    href="#!"
-                    class="text-sm font-medium transition duration-300 ease-in-out text-accent-1 hover:text-accent-1"
-                    >2022.11 - Present</a
-                  >
                 </div>
-                <p class="mb-6 text-gray-700">
-                  I'm developing and improving e-commerce websites using a range
-                  of tools and technologies:<br />
-                  Magento, PHP, HTML5, CSS3, LESS, XML, MYSQL, Javascript, GIT,
-                  NPM, Composer, Docker.
-                </p>
-
-                <!-- <button
-                  type="button"
-                  class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                  data-mdb-ripple="true"
-                >
-                  See demo
-                </button> -->
-              </div>
             </div>
-          </div>
 
-          <div class="border-l-2 border-accent-1">
-            <div class="md:flex flex-start">
-              <div
-                class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  class="w-3 h-3 text-white"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="block p-6 mb-10 ml-6 rounded-lg shadow-lg bg-grayish-2"
-              >
-                <div class="flex justify-between mb-4 md:flex-col">
-                  <div
-                    class="flex gap-1 font-bold text-accent-2 md:flex-col md:gap-0"
-                  >
-                    Fullstack developer
-                    <div class="flex gap-1">
-                      <div>@</div>
-                      <div class="text-accent-1">
-                        <a href="https://vsbl.lt">VSBL</a>
-                      </div>
-                    </div>
-                  </div>
-                  <a
-                    href="#!"
-                    class="text-sm font-medium transition duration-300 ease-in-out text-accent-1 hover:text-accent-1 focus:text-accent-1"
-                    >2019.10 - 2022.10</a
-                  >
-                </div>
-                <p class="mb-6 text-gray-700">
-                  Representative website and e-mail store development using:<br />
-                  GIT, PHP, HTML5, CSS3, PCSS, MYSQL, Javascript, Gulp, NPM,
-                  Bootstrap, Sage & Bedrock (roots.io), Tailwind, Laravel,
-                  Webpack, Wordpress, Woocommerce, Prestashop ir t.t.
-                </p>
-
-                <!-- <button
-                  type="button"
-                  class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                  data-mdb-ripple="true"
-                >
-                  See demo
-                </button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="border-l-2 border-accent-1">
-            <div class="md:flex flex-start">
-              <div
-                class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  class="w-3 h-3 text-white"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="block p-6 mb-10 ml-6 rounded-lg shadow-lg bg-grayish-2"
-              >
-                <div class="flex justify-between mb-4 md:flex-col">
-                  <div
-                    class="flex gap-1 font-bold text-accent-2 md:flex-col md:gap-0"
-                  >
-                    IT project manager
-                    <div class="flex gap-1">
-                      <div>@</div>
-                      <div class="text-accent-1">
-                        <a href="https://digitouch.lt/">UAB digitouch!</a>
-                      </div>
-                    </div>
-                  </div>
-                  <a
-                    href="#!"
-                    class="text-sm font-medium transition duration-300 ease-in-out text-accent-1 hover:text-accent-1 focus:text-accent-1"
-                    >2018.05 - 2019.09</a
-                  >
-                </div>
-                <p class="mb-6 text-gray-700">
-                  Delegate tasks and oversee project execution, plan project
-                  resources.<br />
-                  Project budget supervision and control, procurement
-                  management, tracking and account control.<br />
-                  Close monitoring and reporting of project data.<br />
-                  Communication with IT specialists, programmers and designers
-                  who are directly related to the implementation of the project.
-                </p>
-
-                <!-- <button
-                  type="button"
-                  class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                  data-mdb-ripple="true"
-                >
-                  See demo
-                </button> -->
-              </div>
-            </div>
-          </div>
-
-          <div class="border-l-2 border-accent-1">
-            <div class="md:flex flex-start">
-              <div
-                class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
-              >
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  data-prefix="fas"
-                  class="w-3 h-3 text-white"
-                  role="img"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                  ></path>
-                </svg>
-              </div>
-              <div
-                class="block p-6 mb-10 ml-6 rounded-lg shadow-lg bg-grayish-2"
-              >
-                <div class="flex justify-between mb-4 md:flex-col">
-                  <div
-                    class="flex gap-1 font-bold text-accent-2 md:flex-col md:gap-0"
-                  >
-                    WEB developer
-                    <div class="flex gap-1">
-                      <div>@</div>
-                      <div class="text-accent-1">
-                        <a href="https://brandlions.lt/">Brand lions</a>
-                      </div>
-                    </div>
-                  </div>
-                  <a
-                    href="#!"
-                    class="text-sm font-medium transition duration-300 ease-in-out text-accent-1 hover:text-accent-1 focus:text-accent-1"
-                    >2015.09 - 2018.03</a
-                  >
-                </div>
-                <p class="mb-6 text-gray-700">
-                  Representative website and e-shop development using:<br />
-                  PHP, HTML5, MySQL, CSS3, Javascript, Jquery.
-                </p>
-
-                <!-- <button
-                  type="button"
-                  class="inline-block px-3.5 py-1 border-2 border-purple-600 text-purple-600 font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out"
-                  data-mdb-ripple="true"
-                >
-                  See demo
-                </button> -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -315,7 +124,9 @@
     <div class="grid grid-cols-12 gap-8">
       <div class="col-span-8 col-start-3 md:col-start-1 md:col-span-12">
         <h3 class="col-span-10 col-start-2 mb-8">Contact me:</h3>
-        <div class="flex items-center justify-between md:flex-col md:justify-start md:items-start">
+        <div
+          class="flex items-center justify-between md:flex-col md:justify-start md:items-start"
+        >
           <div class="referal md:mb-5">
             <p class="mb-2 text-xs font-semibold">
               Get $200 in credit over 60 days for your website:
@@ -394,12 +205,27 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   props: ["componentData"],
+  data() {
+    return {
+        experiences: {},
+    };
+  },
   methods: {
     email: function (name, domain) {
       window.location.href = "mailto:" + name + "@" + domain;
     },
+    getExperiences() {
+      axios.get("/api/getExperiences").then((response) => {
+        this.experiences = response.data;
+      });
+    },
+  },
+  created() {
+    this.getExperiences();
   },
 };
 </script>

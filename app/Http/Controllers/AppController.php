@@ -10,11 +10,6 @@ use Request;
 class AppController extends Controller
 {
     public function index() {
-
-        $infoFromController = [
-            'projects' => Project::latest()->paginate(5),
-        ];
-
-        return view('welcome', compact('infoFromController'));
+        return view('welcome');
     }
 }

@@ -35,7 +35,6 @@ export default {
     },
     created() {
         this.getProjects();
-        console.log(this.projects);
     }
 
 }

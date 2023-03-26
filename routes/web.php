@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ExperienceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,8 @@ Route::get('/contacts', ['\App\Http\Controllers\AppController', 'index']);
 
 Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
     Route::resource('admin/projects', ProjectController::class);
+    Route::resource('admin/pages', PageController::class);
+    Route::resource('admin/experiences', ExperienceController::class);
     Route::view('admin/dashboard', 'dashboard')->name('dashboard');
     Route::view('admin/forms', 'forms')->name('forms');
     Route::view('admin/cards', 'cards')->name('cards');
@@ -35,4 +39,6 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
 Route::prefix('api')->group( function() {
     Route::get('getProjects', ['\App\Http\Controllers\ProjectController', 'getProjects']);
+    Route::get('getPages', ['\App\Http\Controllers\PageController', 'getPages']);
+    Route::get('getExperiences', ['\App\Http\Controllers\ExperienceController', 'getExperiences']);
 });
