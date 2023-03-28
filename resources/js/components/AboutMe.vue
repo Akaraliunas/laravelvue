@@ -99,7 +99,7 @@
                           <div class="flex gap-1">
                             <div>@</div>
                             <div class="text-accent-1">
-                              <a href="{{ experience.company_url }}">{{ experience.company }}</a>
+                              <a :href="experience.company_url">{{ experience.company }}</a>
                             </div>
                           </div>
                         </div>
