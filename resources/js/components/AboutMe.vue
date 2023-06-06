@@ -35,10 +35,9 @@
       <div class="flex items-center col-span-6 md:order-2 md:col-span-6 sm:col-span-12">
         <div class="content text-white-1">
           <p>
-            Hello! My name is Aivaras Karaliūnas and with 3-4 years of
-            experience in website and e-shop creation, I have developed a
-            passion for creating exceptional digital experiences that drive
-            results. I am highly motivated and driven by the end result, always
+            Hello! My name is Aivaras Karaliūnas. <br>
+            I have about 3-4 years of experience in website and e-shop development. <br>
+            I am highly motivated and driven by the end result, always
             striving to exceed expectations. Also I am constantly seeking to
             expand my knowledge and stay up-to-date with the latest trends in
             the field of IT.
@@ -64,7 +63,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 gap-8 py-20 md:py-6">
+    <div class="grid grid-cols-12 gap-8 pt-20 md:pt-6" v-if="experiences.length">
       <div class="col-span-8 col-start-3 md:col-start-1 md:col-span-12">
         <h3 class="col-span-10 col-start-2 mb-8">My experience:</h3>
         <div class="flex flex-col">
@@ -121,7 +120,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-12 gap-8">
+    <div class="grid grid-cols-12 gap-8 pt-10 md:pt-6">
       <div class="col-span-8 col-start-3 md:col-start-1 md:col-span-12">
         <h3 class="col-span-10 col-start-2 mb-8">Contact me:</h3>
         <div

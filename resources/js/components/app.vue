@@ -32,7 +32,7 @@
         <div class="bg" v-if="$route.path === '/'">
             <div class="overlay bg-dark-1 opacity-70 z-[15] fixed top-0 left-0 w-full h-full"></div>
             <div class="fixed top-0 left-0 z-10 w-full h-full">
-                <video class="md:min-w-fit" autoplay loop src="/videos/programming.mp4"></video>
+                <video class="md:min-w-fit w-full" autoplay loop src="/videos/programming.mp4"></video>
             </div>
         </div>
     </div>
