@@ -36,9 +36,9 @@
 
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="px-4 py-3 form-group">
-                            <strong class="font-semibold text-gray-600 dark:text-gray-300">Title:</strong>
-                            <input type="text" name="title" class="block w-full mt-1 text-sm font-semibold text-gray-600 form-control dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input" placeholder="Title" value="{{ $experience->title }}">
-                            @error('title')
+                            <strong class="font-semibold text-gray-600 dark:text-gray-300">Position:</strong>
+                            <input type="text" name="position" class="block w-full mt-1 text-sm font-semibold text-gray-600 form-control dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input" placeholder="Position" value="{{ $experience->position }}">
+                            @error('position')
                                 <div class="mt-1 mb-1 alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
@@ -58,7 +58,7 @@
                         <div class="px-4 py-3 form-group">
                             <strong class="font-semibold text-gray-600 dark:text-gray-300">Company url:</strong>
                             <input type="text" name="company_url" class="block w-full mt-1 text-sm font-semibold text-gray-600 form-control dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input" placeholder="Company url" value="{{ $experience->company_url }}">
-                            @error('title')
+                            @error('company_url')
                                 <div class="mt-1 mb-1 alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
