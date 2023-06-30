@@ -69,7 +69,7 @@
         <div class="flex flex-col">
 
             <div class="flex flex-col" v-for="experience in experiences" :key="experience.id">
-                <div class="border-l-2 border-accent-1">
+                <div class="border-l-2 border-accent-1 md:ml-3">
                   <div class="md:flex flex-start">
                     <div
                       class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"

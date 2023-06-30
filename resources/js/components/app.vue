@@ -21,7 +21,7 @@
             </div>
         </div>
 
-        <div class="container relative z-20 py-10">
+        <div class="container relative z-40 py-10 " :class="{ 'pointer-events-none': $route.path === '/' }">
             <router-view v-slot="{ Component }">
                 <transition name="scale" mode="out-in">
                    <component :is="Component"/>
@@ -29,20 +29,30 @@
             </router-view>
 
         </div>
-        <div class="bg" v-if="$route.path === '/'">
-            <div class="overlay bg-dark-1 opacity-70 z-[15] fixed top-0 left-0 w-full h-full"></div>
-            <div class="fixed top-0 left-0 z-10 w-full h-full">
-                <video class="w-full md:min-w-fit" autoplay loop src="/videos/programming.mp4"></video>
+        <div class="bg">
+            <div class="overlay bg-[#262c32] opacity-[0.95] z-[11] fixed top-0 left-0 w-full h-full pointer-events-none"></div>
+            <div class="fixed top-0 left-0 w-full h-full z-[12]">
+                <Particles
+                    id="tsparticles"
+                    :options="particlesOptions"
+                    :particlesInit="particlesInit"
+                />
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { loadFull } from "tsparticles";
+import particlesJson from '../particles/particles.js';
+
 export default {
     data() {
         return {
-
+            particlesInit: async (engine) => {
+                await loadFull(engine);
+            },
+            particlesOptions: particlesJson,
         }
     },
     methods: {
@@ -54,56 +64,56 @@ export default {
                 document.querySelector('.js-menu').classList.toggle('active');
             }
         }
-    }
+    },
 }
 </script>
 
 <style lang="postcss" scoped>
-.logo {
-    a {
-        @apply font-heading font-medium text-xl;
-    }
-}
-
-.menu {
-    a {
-        @apply font-heading text-sm font-medium;
-        @apply md:text-center md:text-2xl;
-
-        span {
-            @apply text-accent-2 mr-2;
-        }
-
-        &.router-link-exact-active {
-            @apply text-accent-1;
+    .logo {
+        a {
+            @apply font-heading font-medium text-xl;
         }
     }
-}
 
-.js-menu {
-    @apply md:opacity-0 md:pointer-events-none;
-    @apply md:fixed md:left-0 md:top-0 md:w-full md:h-full md:bg-dark-1 md:flex md:flex-col md:pt-28 md:z-30;
+    .menu {
+        a {
+            @apply font-heading text-sm font-medium;
+            @apply md:text-center md:text-2xl;
 
-    &.active {
-        @apply opacity-100 pointer-events-auto;
+            span {
+                @apply text-accent-2 mr-2;
+            }
+
+            &.router-link-exact-active {
+                @apply text-accent-1;
+            }
+        }
     }
-}
 
-.tham {
-    &-active {
-        @apply z-[99];
+    .js-menu {
+        @apply md:opacity-0 md:pointer-events-none;
+        @apply md:fixed md:left-0 md:top-0 md:w-full md:h-full md:bg-dark-1 md:flex md:flex-col md:pt-28 md:z-30;
+
+        &.active {
+            @apply opacity-100 pointer-events-auto;
+        }
     }
-}
 
-.scale-enter-active,
-.scale-leave-active {
-  transition: all 0.5s ease;
-}
+    .tham {
+        &-active {
+            @apply z-[99];
+        }
+    }
+
+    .scale-enter-active,
+    .scale-leave-active {
+    transition: all 0.5s ease;
+    }
 
 
-.scale-enter-from,
-.scale-leave-to {
-  opacity: 0;
-  transform: scale(0.9);
-}
+    .scale-enter-from,
+    .scale-leave-to {
+    opacity: 0;
+    transform: scale(0.9);
+    }
 </style>
