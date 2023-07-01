@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container relative z-[21]">
+        <div class="container relative z-[99]">
             <div class="flex items-center justify-between my-5">
                 <div class="logo">
                     <router-link :to="{ name: 'home' }">Karaliunas.dev</router-link>

@@ -72,7 +72,7 @@
                 <div class="border-l-2 border-accent-1 md:ml-3">
                   <div class="md:flex flex-start">
                     <div
-                      class="bg-accent-1 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5"
+                      class="bg-accent-1 w-6 min-w-[24px] h-6 flex items-center justify-center rounded-full -ml-3.5"
                     >
                       <svg
                         aria-hidden="true"
