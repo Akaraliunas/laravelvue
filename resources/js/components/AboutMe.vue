@@ -20,7 +20,7 @@
             ></div>
             <img
               class="block object-cover w-full h-full overflow-hidden"
-              src="/images/Aivaras.png"
+              src="/images/AKA-web-min.png"
               alt="Aivaras Karaliūnas"
             />
             <div
