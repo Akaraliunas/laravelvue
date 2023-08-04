@@ -37,7 +37,7 @@
         "laravel-mix-tailwind": "^0.1.2",
         "npm": "^9.4.0",
         "tailwind-hamburgers": "^1.2.2",
-        "tsparticles": "^2.10.1",
+        "tsparticles": "^2.11.0",
         "turbolinks": "^5.2.0",
         "vue": "^3.2.29",
         "vue-router": "^4.0.12",
