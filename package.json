@@ -39,9 +39,9 @@
         "tailwind-hamburgers": "^1.2.2",
         "tsparticles": "^2.10.1",
         "turbolinks": "^5.2.0",
-        "vue": "^3.2.29",
+        "vue": "^3.4.15",
         "vue-router": "^4.0.12",
-        "vue-template-compiler": "^2.6.11",
+        "vue-template-compiler": "^2.7.16",
         "vue3-particles": "^2"
     }
 }
