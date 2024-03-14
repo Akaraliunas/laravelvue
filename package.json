@@ -40,7 +40,7 @@
         "tsparticles": "^2.10.1",
         "turbolinks": "^5.2.0",
         "vue": "^3.2.29",
-        "vue-router": "^4.0.12",
+        "vue-router": "^4.3.0",
         "vue-template-compiler": "^2.6.11",
         "vue3-particles": "^2"
     }
