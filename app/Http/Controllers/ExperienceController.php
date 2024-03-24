@@ -117,7 +117,7 @@ class ExperienceController extends Controller
 
     public function getExperiences()
     {
-        $experiences = Experience::all();
+        $experiences = Experience::orderBy('created_at', 'DESC')->get();
 
         return $experiences;
     }

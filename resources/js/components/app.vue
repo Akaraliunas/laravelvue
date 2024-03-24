@@ -29,30 +29,19 @@
             </router-view>
 
         </div>
-        <div class="bg">
-            <div class="overlay bg-[#262c32] opacity-[0.95] z-[11] fixed top-0 left-0 w-full h-full pointer-events-none"></div>
-            <div class="fixed top-0 left-0 w-full h-full z-[12]">
-                <Particles
-                    id="tsparticles"
-                    :options="particlesOptions"
-                    :particlesInit="particlesInit"
-                />
+        <div class="bg" v-if="$route.path === '/'">
+            <div class="overlay bg-dark-1 opacity-80 z-[15] fixed top-0 left-0 w-full h-full"></div>
+            <div class="fixed top-0 left-0 z-10 w-full h-full">
+                <video class="w-full md:min-w-fit" autoplay loop src="/videos/programming.mp4"></video>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { loadFull } from "tsparticles";
-import particlesJson from '../particles/particles.js';
-
 export default {
     data() {
         return {
-            particlesInit: async (engine) => {
-                await loadFull(engine);
-            },
-            particlesOptions: particlesJson,
         }
     },
     methods: {
@@ -116,4 +105,41 @@ export default {
     opacity: 0;
     transform: scale(0.9);
     }
+
+.overlay-down-full-enter ~ .overlay-top {
+  height: 100vh;
+}
+
+.overlay-down-full-enter-to ~ .overlay-bottom {
+  height: 0;
+}
+
+.overlay-down-full-enter-active ~ .overlay-top,
+.overlay-down-full-leave-active ~ .overlay-top {
+  height: 100vh;
+}
+
+.overlay-down-full-enter-active ~ .overlay-top {
+  transition-timing-function: ease-in;
+}
+
+.overlay-down-full-leave-active ~ .overlay-bottom {
+  transition-timing-function: ease;
+}
+
+.overlay-down-full-enter-active,
+.overlay-down-full-leave-active {
+  transition-duration: var(--transition-duration);
+}
+.overlay-down-full-enter-active ~ .overlay-top,
+.overlay-down-full-enter-to ~ .overlay-top {
+  display: none;
+}
+
+.overlay-down-full-enter ~ .overlay-bottom,
+.overlay-down-full-enter-active ~ .overlay-bottom,
+.overlay-down-full-enter-to ~ .overlay-bottom {
+  transition-duration: unset !important;
+  height: 100vh;
+}
 </style>

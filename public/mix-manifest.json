@@ -1,8 +1,10 @@
 {
-    "/js/app.js": "/js/app.js?id=1119bdd2b35693b2a42ffd10523a920d",
-    "/css/app.css": "/css/app.css?id=52510bc95fafed26ece655ac8f22b935",
-    "/images/Aivaras.png": "/images/Aivaras.png?id=6efed515da8003da699e99a9ddd3ade5",
-    "/images/favicon.ico": "/images/favicon.ico?id=a16fc195de8c9dfaea7b321e883055a8",
-    "/images/favicon.png": "/images/favicon.png?id=0779f229848078762ba12140cd1cb9ba",
-    "/videos/programming.mp4": "/videos/programming.mp4?id=8c36fd435507dac91174d26f82d36b0b"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/images/Aivaras.png": "/images/Aivaras.png",
+    "/images/AKA-web-min.png": "/images/AKA-web-min.png",
+    "/images/favicon.ico": "/images/favicon.ico",
+    "/images/favicon.png": "/images/favicon.png",
+    "/videos/programming.mp4": "/videos/programming.mp4",
+    "/videos/programmingg.mp4": "/videos/programmingg.mp4"
 }
