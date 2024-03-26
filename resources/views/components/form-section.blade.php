@@ -2,7 +2,7 @@
 
 <div {{ $attributes->merge(['class' => 'mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800']) }}>
     <div class="mt-5 md:mt-0 md:col-span-2">
-        <form wire:submit.prevent="{{ $submit }}">
+        <form wire:submit="{{ $submit }}">
             <div class="overflow-hidden">
                 <div class="px-4 py-5 sm:p-6">
                     <div class="grid grid-cols-6 gap-6">

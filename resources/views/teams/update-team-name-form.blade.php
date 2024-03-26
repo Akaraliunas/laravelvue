@@ -29,7 +29,7 @@
             <x-input id="name"
                         type="text"
                         class="block w-full mt-1"
-                        wire:model.defer="state.name"
+                        wire:model="state.name"
                         :disabled="! Gate::check('update', $team)" />
 
             <x-input-error for="name" class="mt-2" />

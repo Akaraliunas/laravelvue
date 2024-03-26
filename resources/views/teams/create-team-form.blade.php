@@ -23,7 +23,7 @@
 
         <div class="col-span-6 sm:col-span-4">
             <x-label for="name" value="{{ __('Team Name') }}" />
-            <x-input id="name" type="text" class="block w-full mt-1" wire:model.defer="state.name" autofocus />
+            <x-input id="name" type="text" class="block w-full mt-1" wire:model="state.name" autofocus />
             <x-input-error for="name" class="mt-2" />
         </div>
     </x-slot>

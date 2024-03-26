@@ -36,7 +36,7 @@
         <div class="content text-white-1">
           <p>
             Hello! My name is Aivaras Karaliūnas. <br>
-            I have about 3-4 years of experience in website and e-shop development. <br>
+            I have about 5-6 years of experience in website and e-shop development. <br>
             I am highly motivated and driven by the end result, always
             striving to exceed expectations. Also I am constantly seeking to
             expand my knowledge and stay up-to-date with the latest trends in
