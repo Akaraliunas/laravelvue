@@ -1,10 +1,12 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/images/Aivaras.png": "/images/Aivaras.png",
-    "/images/AKA-web-min.png": "/images/AKA-web-min.png",
-    "/images/favicon.ico": "/images/favicon.ico",
-    "/images/favicon.png": "/images/favicon.png",
-    "/videos/programming.mp4": "/videos/programming.mp4",
-    "/videos/programmingg.mp4": "/videos/programmingg.mp4"
+    "/js/app.js": "/js/app.js?id=64d68ab6989e472337dfd9514859e437",
+    "/css/app.css": "/css/app.css?id=fea59ef7e5796e451dac4e84e2c55777",
+    "/images/36768035.jpg": "/images/36768035.jpg?id=0de2750248259a3d08825f4f91e53ba9",
+    "/images/Aivaras.png": "/images/Aivaras.png?id=6efed515da8003da699e99a9ddd3ade5",
+    "/images/AivarasKaraliunas.jpg": "/images/AivarasKaraliunas.jpg?id=0de2750248259a3d08825f4f91e53ba9",
+    "/images/AKA-web-min.png": "/images/AKA-web-min.png?id=848b40be9d3b7aa5b44e4d980aae4663",
+    "/images/favicon.ico": "/images/favicon.ico?id=a16fc195de8c9dfaea7b321e883055a8",
+    "/images/favicon.png": "/images/favicon.png?id=0779f229848078762ba12140cd1cb9ba",
+    "/videos/programming.mp4": "/videos/programming.mp4?id=5360226199a12b3062b854b0a3eec339",
+    "/videos/programmingg.mp4": "/videos/programmingg.mp4?id=5360226199a12b3062b854b0a3eec339"
 }

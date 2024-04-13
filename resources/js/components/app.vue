@@ -21,19 +21,13 @@
             </div>
         </div>
 
-        <div class="container relative z-40 py-10 " :class="{ 'pointer-events-none': $route.path === '/' }">
+        <div class="container relative z-40 py-10 ">
             <router-view v-slot="{ Component }">
                 <transition name="scale" mode="out-in">
                    <component :is="Component"/>
                  </transition>
             </router-view>
 
-        </div>
-        <div class="bg" v-if="$route.path === '/'">
-            <div class="overlay bg-dark-1 opacity-80 z-[15] fixed top-0 left-0 w-full h-full"></div>
-            <div class="fixed top-0 left-0 z-10 w-full h-full">
-                <video class="w-full md:min-w-fit" autoplay loop src="/videos/programming.mp4"></video>
-            </div>
         </div>
     </div>
 </template>
