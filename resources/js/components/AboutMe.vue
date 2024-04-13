@@ -15,7 +15,7 @@
 
           <p>If you're interested in my preferred stack, I lean towards a headless solution with Vue.js or React in the frontend, coupled with any of the earlier mentioned e-commerce platforms in the backend. This setup offers the flexibility and scalability necessary to tackle a variety of projects with efficiency and innovation.</p>
 
-          <p>Feel free to reach out to me via LinkedIn or email at aivaras@karaliunas.dev</p>
+          <p>Feel free to reach out to me via <a href="https://www.linkedin.com/in/aivaras-karaliūnas/" class="font-bold text-white hover:text-accent-1">LinkedIn</a> or <a class="font-bold text-white cursor-pointer js-email hover:text-accent-1" href="javascript:void(0)" v-on:click="email('aivaras', 'karaliunas.dev')">email</a></p>
 
         </div>
       </div>
