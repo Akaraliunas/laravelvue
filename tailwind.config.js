@@ -3,15 +3,13 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
     mode: 'jit',
-    purge: {
-        content: [
-            './resources/views/**/*.php', './resources/**/*.{php,vue,js}',
-            './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-            './vendor/laravel/jetstream/**/*.blade.php',
-            './storage/framework/views/*.php',
-            './resources/views/**/*.blade.php',
-        ],
-    },
+    content: [
+        './resources/views/**/*.php', './resources/**/*.{php,vue,js}',
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        './vendor/laravel/jetstream/**/*.blade.php',
+        './storage/framework/views/*.php',
+        './resources/views/**/*.blade.php',
+    ],
     theme: {
         themeVariants: ['dark'],
         customForms: (theme) => ({
