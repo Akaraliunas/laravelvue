@@ -37,7 +37,7 @@
         "audit": "^0.0.6",
         "gsap": "^3.12.5",
         "laravel-mix-tailwind": "^0.1.2",
-        "npm": "^9.4.0",
+        "npm": "^10.9.1",
         "tailwind-hamburgers": "^1.2.2",
         "turbolinks": "^5.2.0",
         "vue": "^3.2.29",
